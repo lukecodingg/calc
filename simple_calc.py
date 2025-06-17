@@ -1,4 +1,24 @@
-print("""
+def add(no1, no2):
+  result = no1 + no2
+  print("Your solution is", result)
+
+def subtract(no1, no2):
+  if no2 > no1:
+    result = no2 - no1
+  else: 
+    result = no1 - no2
+    print("Your solution is", result)
+
+def multiply(no1, no2):
+  result = no1 * no2
+  print("Your solution is", result)
+
+def divide(no1, no2):
+  result = no1 / no2
+  print("Your solution is", result)
+
+while true:
+  print("""
   _________.___   _____ __________.____     ___________ _________     _____  .____   _________  
  /   _____/|   | /     \\______   \    |    \_   _____/ \_   ___ \   /  _  \ |    |  \_   ___ \ 
  \_____  \ |   |/  \ /  \|     ___/    |     |    __)_  /    \  \/  /  /_\  \|    |  /    \  \/ 
@@ -33,17 +53,17 @@ no1 = int(input("What is your first number?"))
 
 no2 = int(input("What is your second number?"))
 
-def add(no1, no2):
-  result = no1 + no2
-  print("Your solution is", result)
-
 if choice == 1:
   add(no1, no2)
 elif choice == 2:
-  
+  subtract(no1, no2)
 elif choice == 3:
-  
+  multiply(no1, no2)
 elif choice == 4: 
-   print("You chose to divide by")
+  divide(no1, no2)
 else: 
-  print("Invalid, please input numbers only")
+  print("Error in script")
+
+restart = input("Press q to quit and any other key to continue.")
+if restart.lower() == 'q':
+    break
