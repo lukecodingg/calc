@@ -43,33 +43,32 @@ while True:
 ----------------------------
 """)
 
-    try:
         choice = int(input("What is your choice? "))
         no1 = int(input("What is your first number? "))
         no2 = int(input("What is your second number? "))
     except ValueError:
         print("Invalid input! Please enter numbers only.\n")
-        continue
-
-if 1 <= choice <= 4:
-    if choice == 1:
-        print("You chose to add")
-        add(no1, no2)
-    elif choice == 2:
-        print("You chose to subtract")
-        subtract(no1, no2)
-    elif choice == 3:
-        print("You chose to multiply")
-        multiply(no1, no2)
-    elif choice == 4:
-        print("You chose to divide")
-        divide(no1, no2)
-else:
-    print("Please choose a number between 1 and 4")
-
-
+        continue  
+    
+    if 1 <= choice <= 4:
+        if choice == 1:
+            print("You chose to add")
+            add(no1, no2)
+        elif choice == 2:
+            print("You chose to subtract")
+            subtract(no1, no2)
+        elif choice == 3:
+            print("You chose to multiply")
+            multiply(no1, no2)
+        elif choice == 4:
+            print("You chose to divide")
+            divide(no1, no2)
+    else:
+        print("Please choose a number between 1 and 4")
+        continue 
+    
     restart = input("\nPress 'q' to quit or any other key to continue: ")
     if restart.lower() == 'q':
         break
-
+      
 print("\033[0m")
