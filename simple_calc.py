@@ -63,8 +63,8 @@ while True:
     elif choice == 4:
         print("You chose to divide")
         divide(no1, no2)
-    elif choice > 4:
-      print("Please choose from 1-4")
+    elif choice < 1 or choice > 4:
+    print("Invalid, choose from 1-4")
     else:
         print("Invalid choice! Please select 1, 2, 3, or 4.")
 
