@@ -1,29 +1,32 @@
 print("\033[32m")
 
 def add(no1, no2):
-  result = no1 + no2
-  print("Your solution is", result)
+    result = no1 + no2
+    print("Your solution is", result)
 
 def subtract(no1, no2):
-  if no2 > no1:
-    result = no2 - no1
-    print("Your solution is", result)
-  else: 
-    result = no1 - no2
-    print("Your solution is", result)
+    if no2 > no1:
+        result = no2 - no1
+        print("Your solution is", result)
+    else: 
+        result = no1 - no2
+        print("Your solution is", result)
 
 def multiply(no1, no2):
-  if no2 == 0:
-    print("You can't divide with zero")
-  elif no1 == 0:
-    print("You can't divide with zero")
-  else:
-    result = no1 * no2
-    print("Your solution is", result)
+    if no2 == 0:
+        print("You can't divide with zero")
+    elif no1 == 0:
+        print("You can't divide with zero")
+    else:
+        result = no1 * no2
+        print("Your solution is", result)
 
 def divide(no1, no2):
-  result = no1 / no2
-  print("Your solution is", result)
+    if no2 == 0:
+        print("Error: Cannot divide by zero.")
+    else:
+        result = no1 / no2
+        print("Your solution is", result)
 
 while True:
     print("""
@@ -43,13 +46,14 @@ while True:
 ----------------------------
 """)
 
+    try:
         choice = int(input("What is your choice? "))
         no1 = int(input("What is your first number? "))
         no2 = int(input("What is your second number? "))
     except ValueError:
         print("Invalid input! Please enter numbers only.\n")
-        continue  
-    
+        continue
+
     if 1 <= choice <= 4:
         if choice == 1:
             print("You chose to add")
@@ -65,10 +69,9 @@ while True:
             divide(no1, no2)
     else:
         print("Please choose a number between 1 and 4")
-        continue 
-    
+
     restart = input("\nPress 'q' to quit or any other key to continue: ")
     if restart.lower() == 'q':
         break
-      
+
 print("\033[0m")
