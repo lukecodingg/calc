@@ -51,6 +51,7 @@ while True:
         print("Invalid input! Please enter numbers only.\n")
         continue
 
+if 1 <= choice <= 4:
     if choice == 1:
         print("You chose to add")
         add(no1, no2)
@@ -63,10 +64,9 @@ while True:
     elif choice == 4:
         print("You chose to divide")
         divide(no1, no2)
-    elif choice < 1 or choice > 4:
-    print("Invalid, choose from 1-4")
-    else:
-        print("Invalid choice! Please select 1, 2, 3, or 4.")
+else:
+    print("Please choose a number between 1 and 4")
+
 
     restart = input("\nPress 'q' to quit or any other key to continue: ")
     if restart.lower() == 'q':
