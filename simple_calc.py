@@ -1,5 +1,3 @@
-import os
-
 def add(no1, no2):
   result = no1 + no2
   print("Your solution is", result)
@@ -26,8 +24,6 @@ def divide(no1, no2):
   print("Your solution is", result)
 
 while True:
-      os.system('cls' if os.name == 'nt' else 'clear') # clear text after every loop (used chat GPT)
-
     print("""
   _________.___   _____ __________.____     ___________ _________     _____  .____   _________  
  /   _____/|   | /     \\______   \\    |    \\_   _____/ \\_   ___ \\   /  _  \\ |    |  \\_   ___ \\ 
