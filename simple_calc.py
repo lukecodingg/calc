@@ -1,3 +1,5 @@
+print("\033[32m")
+
 def add(no1, no2):
   result = no1 + no2
   print("Your solution is", result)
@@ -69,3 +71,5 @@ while True:
     restart = input("\nPress 'q' to quit or any other key to continue: ")
     if restart.lower() == 'q':
         break
+
+print("\033[0m")
